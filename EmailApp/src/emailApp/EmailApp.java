@@ -23,7 +23,7 @@ public class EmailApp {
 		while(status) {
 			
 			System.out.print("What would you like to do?\n"
-					+ "1: Create New Employee\n"
+					+ "\n1: Create New Employee\n"
 					+ "2: Change Password\n"
 					+ "3: Forgot Password\n"
 					+ "0: Quit\n"

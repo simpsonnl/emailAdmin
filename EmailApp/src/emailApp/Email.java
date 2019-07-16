@@ -25,13 +25,15 @@ public class Email {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		
-		System.out.println("Name: " + getName());
+		System.out.println("\nName: " + getName());
 		System.out.println("");
 		
 		//sets the department from user input
 		this.department = setDepartment();
-		System.out.println("Department set to: " + this.department + "\n");
-		
+		//if the user chose a department
+		if(!(this.department.equals(""))) {
+			System.out.println("Department set to: " + this.department + "\n");
+		}
 		//gets and prints out an alternate email
 		setAltEmail();
 		System.out.println("Alt Email: " + this.altEmail + "\n");
@@ -135,7 +137,7 @@ public class Email {
 			System.out.println("3. What is your oldest sibling's middle name?");
 			System.out.println("4. In what city or town was your first job?");
 			System.out.println("5. What school did you attend for sixth grade?");
-			System.out.println("Enter the number for the security question you wish to answer: ");
+			System.out.print("\nEnter the number for the security question you wish to answer: ");
 			
 			num = in.next().charAt(0);
 			
@@ -164,7 +166,7 @@ public class Email {
 	
 	//sets security answer
 	public void setAnswer() {
-		System.out.println("\n" + this.question + "\nAnswer: ");
+		System.out.print("\n" + this.question + "\nAnswer: ");
 		Scanner in = new Scanner(System.in);
 		this.answer = in.nextLine();
 	}
